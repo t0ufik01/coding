@@ -1,2 +1,0 @@
-# coding
-just for learning
